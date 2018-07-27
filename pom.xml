@@ -54,13 +54,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>				
-				<executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals><goal>copy-dependencies</goal></goals>
-                    </execution>
-                </executions>
+				<configuration>
+        			<mainClass>${start-class}</mainClass>
+		      </configuration>
 			</plugin>
 		</plugins>
 	</build>
