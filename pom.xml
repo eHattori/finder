@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		 <start-class>com.hattori.finder.FinderApplication</start-class>
+		<start-class>com.hattori.finder.FinderApplication</start-class>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -53,10 +53,7 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-                    <mainClass>com.hattori.finder.FinderApplication</mainClass>
-                </configuration>
+				<artifactId>spring-boot-maven-plugin</artifactId>				
 			</plugin>
 		</plugins>
 	</build>
