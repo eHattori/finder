@@ -1,11 +1,14 @@
 package com.hattori.finder.repositories;
 
-import org.springframework.stereotype.Repository;
+import java.util.UUID;
+
+import com.hattori.finder.entities.Store;
+
+import org.springframework.data.repository.CrudRepository;
 
 /**
  * StoreRepository
  */
-@Repository
-public class StoreRepository extends JpaRepository<Stor> {
+public interface StoreRepository extends CrudRepository<Store, UUID> {
 
 }
