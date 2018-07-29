@@ -41,7 +41,7 @@ public class Store {
 
     @JsonProperty("branch")
     @NotNull(groups = { New.class, Existing.class }, message = "The Field Branch can not be null")
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private int branch;
 
     @JsonProperty("postalCode")
