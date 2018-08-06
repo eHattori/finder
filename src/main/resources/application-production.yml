@@ -1,0 +1,8 @@
+logging:
+  level:
+     org.springframework.web: ERROR
+     guru.springframework.controllers: ERROR
+     org.hibernate: ERROR
+
+app:
+  name: finder
