@@ -1,7 +1,6 @@
 package com.hattori.finder.services.impl;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import com.hattori.finder.FinderApplicationTests;
@@ -39,6 +38,11 @@ public class StoreServiceImplTest extends FinderApplicationTests {
     public void test_should_find_all_store_records() {
         repository.save(this.getStore());
         assertTrue(service.findAll().size() == 1);
+    }
+
+    @Test(expected = StoreNotFoundException.class)
+    public void test_should_raise_exception_when_not_found_in_find_all() {
+        service.findAll();
     }
 
     @Test(expected = StoreNotFoundException.class)

@@ -22,7 +22,12 @@ public class StoreServiceImpl implements StoreService {
 
     @Override
     public List<Store> findAll() {
-        return (List<Store>) repository.findAll();
+
+        List<Store> lsStore = repository.findAll();
+        if (lsStore.size() == 0)
+            throw new StoreNotFoundException();
+
+        return lsStore;
     }
 
     @Override
